@@ -1,0 +1,29 @@
+name: Build and deploy hugo site to public branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+      
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Clone this repo
+        uses: actions/checkout@v2
+          
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2.5.0
+        with:
+          hugo-version: 'latest'
+          extended: true
+      
+      - name: Build hugo site
+        run: hugo --minify
+        
+      - name: Deploy hugo site to public branch
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: public

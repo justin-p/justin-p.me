@@ -1,0 +1,63 @@
+baseURL = "https://justin-p.me/"
+disablePathToLower = true
+languageCode = "en"
+title = "Justin Perdok"
+theme = "osprey"
+canonifyURLS = true
+
+[Params]
+  tagline = "IT Geek, Ethical Hacker, DevOps Nut, PowerShell Fanatic and lover of beers🍻"
+  author = "Justin Perdok"
+  description = "IT Geek, Ethical Hacker, DevOps Nut, PowerShell Fanatic and lover of beers🍻"
+  logoBig = "/images/me.png"
+  logoSmall = "/images/me.png"
+  favicon = "favicon.ico"
+  opengraphImage = "/images/osprey.png"
+  email = ""
+  googleTagManager = ""
+  customCSS = false
+
+  # Social media links in footer
+  twitter = "JustinPerdok"
+  linkedin = "justinperdok"
+  github = "justin-p"
+
+  # Copyright and theme author credit in footer
+  copyright = false
+  credit = false
+
+  # Cache busting of static resources (additional set up required)
+  cacheBustCSS = true
+  cacheBustJS = true
+
+  # Code highlighting with highlight.js
+  highlightJS = true
+  highlightJSStyle = "" # For custom highlight.js styles, add your /path/to/styles/default.css
+  highlightJSScript = "" # For custom highlight.js languages config, add your /path/to/highlight.pack.js
+
+  # Choose either Formspree contact form or Basin contact form
+  ajaxFormspree = false
+  ajaxFormspreeGold = false
+  ajaxBasin = ""
+
+  # Lazy loading with lazysizes
+  lazyloading = true
+
+[[menu.main]]
+  name = "About"
+  url  = "/#about"
+  weight = 1
+[[menu.main]]
+  name = "Work"
+  url  = "/#work"
+  weight = 2
+[[menu.main]]
+  name = "Blog"
+  url  = "/#blog"
+  weight = 3
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
